@@ -1,10 +1,10 @@
-let score = parseInt(localStorage.getItem('score')) || 0; // Retrieve the score from localStorage or initialize to 0
+let score = parseInt(localStorage.getItem('score')) || 0; 
 const scoreDisplay = document.getElementById('score-value');
 scoreDisplay.textContent = score;
 
 const sound = {
-    well_done: 'sounds/well done.mp3', // تحديث المسار
-    excellent: 'sounds/Excellent.mp3', // تحديث المسار
+    well_done: 'sounds/well done.mp3', 
+    excellent: 'sounds/Excellent.mp3', 
     confetti: 'sounds/congrats.mp3',
     true: 'sounds/true.mp3',
     false_word: 'sounds/false_word.mp3',

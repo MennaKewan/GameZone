@@ -19,23 +19,10 @@
         <button id="exitBtn">Exit</button>
     </div>
 
-    <canvas id="fireworksCanvas"></canvas> <!-- Container for fireworks effect -->
+    <canvas id="fireworksCanvas"></canvas> 
 
     <audio id="win-sound" src="sounds/You win.mp3"></audio>
 
-    <style>
-        /* Canvas for fireworks */
-        #fireworksCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 9999;
-            background: transparent;
-        }
-    </style>
 
     <script>
         window.addEventListener('load', () => {
@@ -45,16 +32,16 @@
             const score = localStorage.getItem('score') || 0;
             document.getElementById('score-display').textContent = score;
 
-            // Trigger fireworks effect when the win sound starts
+            
             launchFireworks();
 
             // When the sound ends, stop the fireworks and restart the process
             winSound.addEventListener('ended', () => {
                 clearInterval(fireworksInterval);
                 setTimeout(() => {
-                    winSound.play(); // Play the sound again
-                    launchFireworks(); // Trigger fireworks again
-                }, 500); // Delay before restarting (you can adjust the delay time)
+                    winSound.play(); 
+                    launchFireworks(); 
+                }, 500); 
             });
         });
 
@@ -72,8 +59,8 @@
             function Firework(x, y) {
                 this.x = x;
                 this.y = y;
-                this.size = Math.random() * 3 + 3;  // Increase particle size for longer-lasting effect
-                this.speedX = (Math.random() * 4) - 2; // Moderate speed for longer movement
+                this.size = Math.random() * 3 + 3;  
+                this.speedX = (Math.random() * 4) - 2; 
                 this.speedY = (Math.random() * 4) - 2;
                 this.color = colors[Math.floor(Math.random() * colors.length)];
             }
@@ -81,7 +68,7 @@
             Firework.prototype.update = function() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-                this.size -= 0.01; // Slow down the shrinking to keep the particles longer
+                this.size -= 0.01; 
             };
 
             Firework.prototype.draw = function() {
@@ -94,7 +81,7 @@
             function createFirework() {
                 const x = Math.random() * canvas.width;
                 const y = Math.random() * canvas.height;
-                for (let i = 0; i < 75; i++) {  // Increase the number of particles
+                for (let i = 0; i < 75; i++) {  
                     particles.push(new Firework(x, y));
                 }
             }
@@ -113,7 +100,7 @@
                 requestAnimationFrame(animateFireworks);
             }
 
-            fireworksInterval = setInterval(createFirework, 300); // Fireworks every 300ms (slower interval)
+            fireworksInterval = setInterval(createFirework, 300); 
             animateFireworks();
         }
 

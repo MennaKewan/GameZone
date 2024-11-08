@@ -2,8 +2,8 @@ let score = 0;
 const scoreDisplay = document.getElementById('game-score-value');
 
 const sound = {
-    well_done: 'sounds/well done.mp3', // تحديث المسار لـ well done
-    excellent: 'sounds/Excellent.mp3', // تحديث المسار لـ Excellent
+    well_done: 'sounds/well done.mp3', 
+    excellent: 'sounds/Excellent.mp3', 
 };
 
 const dialogues = [
@@ -111,10 +111,10 @@ function showNextDialogue() {
         playAudioTwice(currentDialogue.audio[0], () => {
             playAudioTwice(currentDialogue.audio[1], () => {
                 // تشغيل الصوت الثالث مرة واحدة فقط
-                questionAudio.src = currentDialogue.audio[2]; // الصوت الثالث
+                questionAudio.src = currentDialogue.audio[2]; 
                 questionAudio.currentTime = 0;
                 questionAudio.play();
-                questionAudio.onended = null; // عدم تكرار الصوت الثالث
+                questionAudio.onended = null; 
             });
         });
     }
@@ -140,7 +140,7 @@ function checkAnswer(selectedAnswer) {
 
             correctAnswerAudio.addEventListener('ended', () => {
                 setTimeout(() => {
-                    // تغيير الصوت ليصبح عشوائي بين "well done" و "Excellent"
+                    
                     const soundKeys = Object.keys(sound);
                     const randomSoundKey = soundKeys[Math.floor(Math.random() * soundKeys.length)];
                     const randomSound = new Audio(sound[randomSoundKey]);

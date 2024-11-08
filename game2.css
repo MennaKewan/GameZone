@@ -104,7 +104,7 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     #instruction-play-button {
-        width: 60vw; /* تقليل العرض قليلاً ليكون مناسباً أكثر على الشاشات الصغيرة */
+        width: 70vw; /* تقليل العرض قليلاً ليكون مناسباً أكثر على الشاشات الصغيرة */
         max-width: 200px; /* تعيين حد أقصى للعرض على الشاشات الصغيرة */
         padding: 12px; /* زيادة padding قليلاً لضبط الشكل */
     }

@@ -80,36 +80,37 @@ body {
     background: url('images/bg/bbgg.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
+
 #instruction-play-button {
     background-color: #358739;
     border: #479a56 solid 1px;
     padding: 10px;
-    width: 25vw; /* استخدمنا vw لجعل العرض يتناسب مع عرض الشاشة */
-    max-width: 250px; /* تعيين حد أقصى للعرض بحيث لا يتجاوز الزر هذا الحجم */
+    width: 15%; /* زيادة العرض ليكون أكبر */
     border-radius: 10%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* إضافة تأثير تحول تدريجي */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    white-space: nowrap; /* منع النص من الانكسار وضمان وجوده في سطر واحد */
+    text-align: center; /* لضمان محاذاة النص في منتصف الزر */
 }
 
 #instruction-play-button:hover {
-    background-color: #2e6c2f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    background-color: #2e6c2f; /* تغيير اللون عند التمرير بالماوس */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* تكبير الظل عند التمرير */
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     #instruction-play-button {
-        width: 70vw; /* تقليل العرض قليلاً ليكون مناسباً أكثر على الشاشات الصغيرة */
-        max-width: 200px; /* تعيين حد أقصى للعرض على الشاشات الصغيرة */
+        width: 50%; /* تقليل العرض ليكون مناسبًا على الشاشات الصغيرة */
+        max-width: 200px; /* تعيين حد أقصى للعرض */
         padding: 12px; /* زيادة padding قليلاً لضبط الشكل */
     }
 }
-
 
 
 #game-container {

@@ -38,7 +38,7 @@ body {
     width: 100px;
 }
 
-.game-logo {
+.logo game-logo {
     position: fixed;
     top: 20px;
     left: 30px;
@@ -46,36 +46,25 @@ body {
 }
 
 @media (max-width: 768px) {
-    .logo.instructions-logo {
+    .logo instructions-logo {
         width: 150px; /* زيادة الحجم على الموبايل */
     }
 
-    .game-logo {
-        width: 300px; /* زيادة الحجم على الموبايل */
+    .logo game-logo {
+        width: 150px; /* زيادة الحجم على الموبايل */
     }
 }
 
 /* تكبير الحجم على شاشات الآيباد */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .logo.instructions-logo {
+    .logo instructions-logo {
         width: 180px; /* تكبير الحجم على الآيباد */
     }
 
-    .game-logo {
-        width: 350px; /* تكبير الحجم على الآيباد */
+    .logo game-logo {
+        width: 180px; /* تكبير الحجم على الآيباد */
     }
 }
-
-/* تكبير الحجم على شاشات الموبايل */
-/* @media (max-width: 768px) {
-    .logo.instructions-logo {
-        width: 150px; 
-    }
-
-    .game-logo {
-        width: 300px; 
-    }
-} */
 
 .start-container {
     text-align: center;

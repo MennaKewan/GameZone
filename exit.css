@@ -1,6 +1,6 @@
 body {
     font-family: "Protest Strike", sans-serif;
-    background: url('images/design.jpg') no-repeat center center fixed; 
+    background: url('images/bg/bbgg.jpg') no-repeat center center fixed; 
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -9,11 +9,11 @@ body {
     margin: 0;
     color: #fff;
     text-align: center;
+    overflow: hidden;
 }
-
 .grade-container {
     background-color: rgba(63, 63, 63, 0.8);
-    padding: 4vw;
+    padding: 1.5vw 7vw; 
     border-radius: 20px;
     box-shadow: 0px 0.5vw 1vw rgba(0, 0, 0, 0.5);
     display: flex;
@@ -33,9 +33,10 @@ body {
     }
 }
 
+
 h1 {
     font-size: 3.5vw;
-    color: #fa0000;
+    color: #68ef3f;
     margin-bottom: 2vw;
     animation: bounce 1.5s infinite alternate;
 }
@@ -61,16 +62,16 @@ button {
     font-size: 2vw;
     font-weight: bold;
     cursor: pointer;
-    background-color: #ffeb3b;
+    background-color: #7de36b;
     color: #000;
-    border: 0.4vw solid #ff9800;
+    border: 0.4vw solid  #65bf55;
     border-radius: 50px;
     box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #ffc107;
+    background-color: #65bf55;
     transform: scale(1.05);
 }
 

@@ -31,7 +31,7 @@ body {
     width: 200px;
 }
 
-.instructions-logo {
+.logo instructions-logo {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -116,20 +116,22 @@ p {
         width: 150px;
     }
 }
-
 #game-score {
-    font-size: 2.5em;
+    font-size: 3em; /* زيادة حجم الخط */
+    font-weight: bold; /* جعله بولد */
     color: #00f92e;
     margin-bottom: 20px;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* إضافة ظل بسيط */
 }
+
 
 #game-question-box {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 100%;
+    width: 85%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -140,24 +142,38 @@ p {
     color: #fff;
 }
 
-#listen-button {
+#game-listen-button {
+    background-color: #4caf50 !important; 
+    color: #fff;
+    border-radius: 50%; 
     width: 60px;
     height: 60px;
-    background-color: #4CAF50;
-    border-radius: 50%; 
+    font-size: 1.5em;
     display: flex;
+    scale: 1.3;
     align-items: center;
     justify-content: center;
-    border: none; 
+    border: none;
     cursor: pointer;
-    font-size: 1.5em;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s;
+    position: fixed; /* تثبيت الزر في مكانه */
+    top: 50px; /* المسافة من الأعلى */
+    right: 50px; /* المسافة من اليمين */
 }
 
 #game-listen-button:hover {
-    background-color: #000000;
+    background-color: #388e3c !important; 
+}
+
+/* استعلام الوسائط للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    #game-listen-button {
+        top: 10px;  /* تقليل المسافة من الأعلى للشاشات الصغيرة */
+        right: 10px;  /* تقليل المسافة من اليمين للشاشات الصغيرة */
+        width: 50px; /* تقليل حجم الزر قليلاً للشاشات الصغيرة */
+        height: 50px;
+        font-size: 1.2em; /* تقليل حجم الخط قليلاً */
+    }
 }
 
 #game-image-placeholder {
@@ -176,28 +192,42 @@ p {
     justify-content: space-around;
     width: 100%;
 }
-
 .game-answer-btn {
-    flex: 1;
-    margin: 0 10px;
-    padding: 15px;
+    flex: 0.45; 
+    margin: 0 1px; 
+    padding: 13px;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     border-radius: 50px;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     text-align: center;
+    background-color: #4caf50; 
+    color: white;
+
 }
+
 
 .game-answer-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #388e3c;
 }
 
 .game-answer-btn:disabled {
-    background-color: grey;
-    cursor: not-allowed;
+    background-color: rgb(101, 224, 99);
+   
 }
+
+@media (max-width: 768px) {
+    .game-answer-btn {
+        flex: 1;
+        margin: 0 3px; 
+        font-size: 1.5em;
+        padding: 12px;
+    }
+}
+
 
 #game-confetti {
     position: absolute;

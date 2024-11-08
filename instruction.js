@@ -12,7 +12,7 @@ const dialogues = [
     {
         answer: "One",
         question: "How Many Claps?",
-        audio: ["sounds/how many time arabic sound.mp3", "sounds/how many claps.mp3","sounds/one clap.wav"],
+        audio: ["sounds/how many claps.mp3", "sounds/how many time arabic sound.mp3", "sounds/one clap.wav"],
         options: ["Two", "One"],
         answer_audio: ["sounds/One.mp3"],
         WrongAnswer_audio: "sounds/two.mp3"
@@ -21,7 +21,7 @@ const dialogues = [
         answer: "Two",
         question: "How Many Claps?",
         options: ["Two", "Three"],
-        audio: ["sounds/how many time arabic sound.mp3", "sounds/how many claps.mp3","sounds/two-claps-96256.mp3"],
+        audio: ["sounds/how many claps.mp3", "sounds/how many time arabic sound.mp3", "sounds/two-claps-96256.mp3"],
         answer_audio: ["sounds/two.mp3"],
         WrongAnswer_audio: "sounds/three.mp3"
     },
@@ -29,7 +29,7 @@ const dialogues = [
         answer: "Four",
         question: "How Many Claps?",
         options: ["Three", "Four"],
-        audio: ["sounds/how many time arabic sound.mp3", "sounds/how many claps.mp3","sounds/four claps.wav"],
+        audio: ["sounds/how many claps.mp3", "sounds/how many time arabic sound.mp3", "sounds/four claps.wav"],
         answer_audio: "sounds/four.mp3",
         WrongAnswer_audio: "sounds/three.mp3"
     }

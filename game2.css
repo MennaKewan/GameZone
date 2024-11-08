@@ -82,33 +82,33 @@ body {
 }
 
 #instruction-play-button {
-    background-color: #358739;
+    background-color: #4caf50;
     border: #479a56 solid 1px;
     padding: 10px;
-    width: 15%; /* زيادة العرض ليكون أكبر */
+    width: 15%; 
     border-radius: 10%;
-    transition: all 0.3s ease; /* إضافة تأثير تحول تدريجي */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    white-space: nowrap; /* منع النص من الانكسار وضمان وجوده في سطر واحد */
-    text-align: center; /* لضمان محاذاة النص في منتصف الزر */
+    white-space: nowrap; 
+    text-align: center; 
 }
 
 #instruction-play-button:hover {
-    background-color: #2e6c2f; /* تغيير اللون عند التمرير بالماوس */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* تكبير الظل عند التمرير */
-    transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+    background-color: #388e3c; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     #instruction-play-button {
-        width: 50%; /* تقليل العرض ليكون مناسبًا على الشاشات الصغيرة */
-        max-width: 200px; /* تعيين حد أقصى للعرض */
-        padding: 12px; /* زيادة padding قليلاً لضبط الشكل */
+        width: 50%; 
+        max-width: 200px; 
+        padding: 12px; 
     }
 }
 
@@ -221,7 +221,7 @@ body {
 
 .game-answer-btn:disabled {
     background-color: grey;
-    cursor: not-allowed;
+  
 }
 
 #game-confetti {

@@ -3,14 +3,16 @@ const scoreDisplay = document.getElementById('score-value');
 scoreDisplay.textContent = score;
 
 const sound = {
-    awesome: 'sounds/Awesome.mp3',
-    excellent: 'sounds/Excellent.mp3',
-    good: 'sounds/good.mp3',
-    great: 'sounds/great.mp3',
-    confetti: 'sounds/congrats.mp3',
-    true: 'sounds/true.mp3',
-    false_word: 'sounds/false_word.mp3',
-    wrong: 'sounds/false.mp3'
+ 
+        awesome: 'Sound Ai/well down.mp3',
+        excellent: 'Sound Ai/well down.mp3',
+        good: 'Sound Ai/well down.mp3',
+        great: 'Sound Ai/well down.mp3',
+        confetti: 'sounds/congrats.mp3',
+        true: 'sounds/true.mp3',
+        false_word: 'sounds/false_word.mp3',
+        wrong: 'sounds/false.mp3'
+  
 };
 
 const dialogues = [
@@ -131,18 +133,19 @@ function checkAnswer(selectedAnswer) {
         if (selectedAnswer === currentDialogue.answer) {
             score += 1;
             scoreDisplay.textContent = Math.floor(score);
-
+    
             const soundKeys = Object.keys(sound).filter(key => key !== 'confetti' && key !== 'true' && key !== 'false_word' && key !== 'wrong');
             const randomSoundKey = soundKeys[Math.floor(Math.random() * soundKeys.length)];
             const randomSound = new Audio(sound[randomSoundKey]);
-
+    
             setTimeout(() => {
                 randomSound.play();
-
+    
                 randomSound.addEventListener('ended', () => {
                     createConfetti();
                 });
-            }, 500); 
+            }, 500);
+
 
             currentDialogueIndex++;
             currentQuestion++;

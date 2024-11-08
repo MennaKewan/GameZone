@@ -1,12 +1,12 @@
 let score = 0;
 const scoreDisplay = document.getElementById('game-score-value');
-
 const sound = {
-    awesome: 'sounds/Awesome.mp3',
-    excellent: 'sounds/Excellent.mp3',
-    good: 'sounds/good.mp3',
-    great: 'sounds/great.mp3'
+    awesome: 'Sound Ai/well down.mp3',
+    excellent: 'Sound Ai/well down.mp3',
+    good: 'Sound Ai/well down.mp3',
+    great: 'Sound Ai/well down.mp3'
 };
+
 
 const dialogues = [
     {
@@ -127,7 +127,6 @@ function showNextDialogue() {
 }
 
 
-
 function checkAnswer(selectedAnswer) {
     const currentDialogue = dialogues[currentDialogueIndex];
 
@@ -140,15 +139,13 @@ function checkAnswer(selectedAnswer) {
         setTimeout(() => {
             const correctAnswerAudio = new Audio(currentDialogue.answer_audio);
             correctAnswerAudio.play();
-        
+
             correctAnswerAudio.addEventListener('ended', () => {
                 setTimeout(() => {
-                    const soundKeys = Object.keys(sound);
-                    const randomSoundKey = soundKeys[Math.floor(Math.random() * soundKeys.length)];
-                    const randomSound = new Audio(sound[randomSoundKey]);
-                    randomSound.play();
+                    const singleSound = new Audio(sound.awesome); // Using the same sound for all
+                    singleSound.play();
                            
-                    randomSound.addEventListener('ended', () => {
+                    singleSound.addEventListener('ended', () => {
                         const confettiSound = new Audio('sounds/congrats.mp3');
                         confettiSound.play();
                         createConfetti();

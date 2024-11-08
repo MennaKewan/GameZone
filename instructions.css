@@ -45,9 +45,29 @@ body {
     width: 200px;
 }
 
+@media (max-width: 768px) {
+    .logo.instructions-logo {
+        width: 150px; /* زيادة الحجم على الموبايل */
+    }
+
+    .game-logo {
+        width: 300px; /* زيادة الحجم على الموبايل */
+    }
+}
+
+/* تكبير الحجم على شاشات الآيباد */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo.instructions-logo {
+        width: 180px; /* تكبير الحجم على الآيباد */
+    }
+
+    .game-logo {
+        width: 350px; /* تكبير الحجم على الآيباد */
+    }
+}
 
 /* تكبير الحجم على شاشات الموبايل */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .logo.instructions-logo {
         width: 150px; 
     }
@@ -55,7 +75,7 @@ body {
     .game-logo {
         width: 300px; 
     }
-}
+} */
 
 .start-container {
     text-align: center;
@@ -180,8 +200,8 @@ p {
 /* استعلام الوسائط للأجهزة الصغيرة */
 @media (max-width: 768px) {
     #game-listen-button {
-        top: 20px;  /* تقليل المسافة من الأعلى للشاشات الصغيرة */
-        right: 20px;  /* تقليل المسافة من اليمين للشاشات الصغيرة */
+        top: 30px;  /* تقليل المسافة من الأعلى للشاشات الصغيرة */
+        right: 30px;  /* تقليل المسافة من اليمين للشاشات الصغيرة */
         width: 45px; /* تقليل حجم الزر قليلاً للشاشات الصغيرة */
         height: 45px;
         font-size: 1.1em; /* تقليل حجم الخط قليلاً */

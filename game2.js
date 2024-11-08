@@ -3,18 +3,13 @@ const scoreDisplay = document.getElementById('score-value');
 scoreDisplay.textContent = score;
 
 const sound = {
- 
-        awesome: 'Sound Ai/well down.mp3',
-        excellent: 'Sound Ai/well down.mp3',
-        good: 'Sound Ai/well down.mp3',
-        great: 'Sound Ai/well down.mp3',
-        confetti: 'sounds/congrats.mp3',
-        true: 'sounds/true.mp3',
-        false_word: 'sounds/false_word.mp3',
-        wrong: 'sounds/false.mp3'
-  
+    well_done: 'sounds/well done.mp3', // تحديث المسار
+    excellent: 'sounds/Excellent.mp3', // تحديث المسار
+    confetti: 'sounds/congrats.mp3',
+    true: 'sounds/true.mp3',
+    false_word: 'sounds/false_word.mp3',
+    wrong: 'sounds/false.mp3'
 };
-
 const dialogues = [
     {
         answer: "True",
@@ -145,6 +140,7 @@ function checkAnswer(selectedAnswer) {
                     createConfetti();
                 });
             }, 500);
+       
 
 
             currentDialogueIndex++;

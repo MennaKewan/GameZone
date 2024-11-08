@@ -1,12 +1,10 @@
 let score = 0;
 const scoreDisplay = document.getElementById('game-score-value');
-const sound = {
-    awesome: 'Sound Ai/well down.mp3',
-    excellent: 'Sound Ai/well down.mp3',
-    good: 'Sound Ai/well down.mp3',
-    great: 'Sound Ai/well down.mp3'
-};
 
+const sound = {
+    well_done: 'sounds/well done.mp3', // تحديث المسار لـ well done
+    excellent: 'sounds/Excellent.mp3', // تحديث المسار لـ Excellent
+};
 
 const dialogues = [
     {
@@ -142,10 +140,13 @@ function checkAnswer(selectedAnswer) {
 
             correctAnswerAudio.addEventListener('ended', () => {
                 setTimeout(() => {
-                    const singleSound = new Audio(sound.awesome); // Using the same sound for all
-                    singleSound.play();
-                           
-                    singleSound.addEventListener('ended', () => {
+                    // تغيير الصوت ليصبح عشوائي بين "well done" و "Excellent"
+                    const soundKeys = Object.keys(sound);
+                    const randomSoundKey = soundKeys[Math.floor(Math.random() * soundKeys.length)];
+                    const randomSound = new Audio(sound[randomSoundKey]);
+                    randomSound.play();
+                    
+                    randomSound.addEventListener('ended', () => {
                         const confettiSound = new Audio('sounds/congrats.mp3');
                         confettiSound.play();
                         createConfetti();
@@ -153,6 +154,7 @@ function checkAnswer(selectedAnswer) {
                 }, 500);
             });
         }, 1);
+    
         
         currentDialogueIndex++;
         currentQuestion++;

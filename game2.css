@@ -163,27 +163,25 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    position: fixed; /* تثبيت الزر في مكانه */
-    top: 50px; /* المسافة من الأعلى */
-    right: 50px; /* المسافة من اليمين */
+    position: fixed; 
+    top: 50px; 
+    right: 50px; 
 }
 
 #game-listen-button:hover {
     background-color: #388e3c !important; 
 }
 
-/* استعلام الوسائط للأجهزة الصغيرة */
+
 @media (max-width: 768px) {
     #game-listen-button {
-        top: 30px;  /* تقليل المسافة من الأعلى للشاشات الصغيرة */
-        right: 30px;  /* تقليل المسافة من اليمين للشاشات الصغيرة */
-        width: 45px; /* تقليل حجم الزر قليلاً للشاشات الصغيرة */
+        top: 30px;  
+        right: 30px;  
+        width: 45px; 
         height: 45px;
-        font-size: 1.1em; /* تقليل حجم الخط قليلاً */
+        font-size: 1.1em; 
     }
 }
-
-
 
 
 #game-image-placeholder {
